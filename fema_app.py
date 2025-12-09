@@ -3,9 +3,6 @@ import pandas as pd
 import plotly.express as px
 import os   
 
-st.write("Working directory:", os.getcwd())
-st.write("Files in directory:", os.listdir())
-
 df = pd.read_csv("fema_small.csv")
 
 st.title("FEMA Disaster Relief Dashboard")
@@ -18,6 +15,7 @@ st.plotly_chart(fig1)
 st.subheader("Boxplot: Repair Amount by TSA Eligibility")
 fig2 = px.box(df, x="tsaEligible", y="repairAmount")
 st.plotly_chart(fig2)
+
 
 
 
