@@ -1,7 +1,10 @@
-
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os   
+
+st.write("Working directory:", os.getcwd())
+st.write("Files in directory:", os.listdir())
 
 df = pd.read_csv("fema_small.csv")
 
